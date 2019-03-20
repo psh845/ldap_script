@@ -114,7 +114,7 @@ def settingUserlist(name, sung, num):
 			"givenName": "test",
 			"loginShell": "/bin/bash",
 			"homeDirectory": "/home/test",
-			"mail": "test@4thparty.com",
+			"mail": "test@example.com",
 			"objectClass": ["top", "person", "organizationalPerson", "inetorgperson", "posixAccount"],			
 			"sn": "add",
 			"uid": "test",	
@@ -125,7 +125,7 @@ def settingUserlist(name, sung, num):
 	userlist['gecos'] = name
 	userlist['givenName'] = name
 	userlist['homeDirectory'] = "home/"+name
-	userlist['mail'] = name+"@4thparty.com"
+	userlist['mail'] = name+"@example.com"
 	userlist['sn'] = sung
 	userlist['uid'] = name
 	userlist['uidNumber'] = str(num)
