@@ -132,13 +132,13 @@ def settingUserlist(name, sung, num):
 	return userlist
 
 def main():
-	server = "ldap://changhyun.4thparty.com:389"
+	server = "ldap//example.com:389" #ldap://servername:port
 	rootuser = "uid=admin"
 	rootbasedn = "ou=administrators,ou=topologymanagement,o=netscaperoot"
-	password = "forks2014@@"
+	password = "1234" #password
 	l =  fthLdaps(server, rootuser, rootbasedn, password)
 
-	searchdn= "ou=People,dc=4thparty,dc=com"
+	searchdn= "ou=People,dc=example,dc=com"
 	results=l.search(searchdn)
 	pprint.pprint(results)
 
@@ -148,7 +148,7 @@ def main():
 	print num
 
 	name, sung= "will", "bob"
-	adddn  = "uid={0},ou=People,dc=4thparty,dc=com".format(name)
+	adddn  = "uid={0},ou=People,dc=example,dc=com".format(name)
 	userlist = settingUserlist(name, sung, num)
 	print userlist
 	s = l.addUser(adddn, userlist)
