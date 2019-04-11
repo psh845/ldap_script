@@ -5,7 +5,7 @@ import ldap
 import ldap.modlist
 import pprint
 
-class fthLdaps:
+class exLdaps:
 	"""
 	ldap 라이브러리를 사용하여 만든 클래스입니다.
 	"""
@@ -136,7 +136,7 @@ def main():
 	rootuser = "uid=admin"
 	rootbasedn = "ou=administrators,ou=topologymanagement,o=netscaperoot"
 	password = "1234" #password
-	l =  fthLdaps(server, rootuser, rootbasedn, password)
+	l =  exLdaps(server, rootuser, rootbasedn, password)
 
 	searchdn= "ou=People,dc=example,dc=com"
 	results=l.search(searchdn)
